@@ -1,0 +1,20 @@
+﻿<Page x:Class="EventCinemasWebScrawler.Pages.MainPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      mc:Ignorable="d" 
+      d:DesignHeight="510" d:DesignWidth="900"
+      Title="MainPage">
+    
+    <Grid>
+        <DataGrid x:Name="MoviesDataGrid" ItemsSource="{Binding Movies}" FontSize="12"
+                  IsReadOnly="True" AutoGenerateColumns="False" CanUserAddRows="False" MouseDoubleClick="MoviesDataGrid_MouseDoubleClick">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Name" Binding="{Binding Name}" Width="*" />
+                <DataGridTextColumn Header="Age Rating" Binding="{Binding AgeRating}"  Width="*" />
+                <DataGridTextColumn Header="Number of Sessions" Binding="{Binding SessionCount}"  Width="*" />
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>
